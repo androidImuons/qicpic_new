@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="login"
+            type="com.saqcess.qicpic.viewmodel.LoginViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/app_bg"
+        android:orientation="vertical"
+        tools:context=".view.activity.LoginActivity">
+
+        <ImageView
+            android:layout_width="@dimen/dp200"
+            android:layout_height="@dimen/dp200"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp50"
+            android:src="@drawable/app_logo" />
+
+        <LinearLayout
+            android:id="@+id/iv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp250"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/login_box"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp20"
+                android:fontFamily="@font/morn_ultra_bold"
+                android:gravity="center"
+                android:text="@string/member_s_login"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sp20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              android:layout_margin="@dimen/dp30"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_username"/>
+
+                <com.saqcess.qicpic.customeview.TypeEditTextView
+                    android:id="@+id/et_username_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/morn_bold"
+                    android:hint="@string/username_e_mail"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_gravity="center"
+                    android:text="@={login.username}"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorHint"
+                    android:textSize="@dimen/sp14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp30"
+                android:layout_marginBottom="@dimen/dp10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp30"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_lock" />
+
+                <com.saqcess.qicpic.customeview.TypeEditTextView
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/morn_bold"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_gravity="center"
+                    android:text="@={login.password}"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorHint"
+                    android:textSize="@dimen/sp14" />
+
+            </LinearLayout>
+
+
+            <!--
+                        <com.saqcess.qicpic.customeview.TypeEditTextView
+                            android:id="@+id/et_username_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@drawable/member_login_bar"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_marginRight="@dimen/dp30"
+                            android:hint="@string/username_e_mail"
+                            app:custom_font="@string/app_font_thin"
+                            android:textColorHint="@color/colorHint"
+                            android:textColor="@color/colorBlack"
+                            android:inputType="textEmailAddress"
+                            android:text="@={login.username}"
+                            android:textSize="@dimen/sp14"
+                            android:paddingLeft="@dimen/dp50"
+                            android:layout_marginTop="@dimen/dp10"/>
+            -->
+
+            <!--
+                        <com.saqcess.qicpic.customeview.TypeEditTextView
+                            android:id="@+id/et_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp40"
+                            android:background="@drawable/password_bar"
+                            android:layout_marginLeft="@dimen/dp30"
+                            android:layout_marginRight="@dimen/dp30"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:text="@={login.password}"
+                            app:custom_font="@string/app_font_thin"
+                            android:textColorHint="@color/colorHint"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp14"
+                            android:paddingLeft="@dimen/dp50"
+                            android:layout_marginTop="@dimen/dp10"/>
+            -->
+
+            <!--
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.saqcess.qicpic.customeview.TypefaceCheckBox
+                                android:id="@+id/cb_remember_me"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dp5"
+                                android:gravity="center"/>
+
+                            <com.saqcess.qicpic.customeview.TypeTextView
+                                android:id="@+id/tv_remember_me"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAllCaps="false"
+                                android:textSize="@dimen/sp10"
+                                android:background="@android:color/transparent"
+                                android:textColor="@color/colorWhite"
+                                app:custom_font="@string/app_font_bold_italic"
+                                android:gravity="start|top|center"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/dp5"
+                                android:text="@string/remember_me"/>
+
+                        </LinearLayout>
+            -->
+
+        </LinearLayout>
+
+        <com.saqcess.qicpic.customeview.TypeTextView
+            android:id="@+id/tv_Login"
+            android:layout_width="@dimen/dp150"
+            android:layout_height="@dimen/dp50"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_button"
+            android:fontFamily="@font/morn_ultra_bold"
+            android:gravity="center"
+            android:onClick="@{login::onLoginButtonClick}"
+            android:padding="@dimen/dp5"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp20" />
+
+    </LinearLayout>
+</layout>

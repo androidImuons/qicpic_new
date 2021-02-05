@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="postGalleryPath"
+            type="com.saqcess.qicpic.model.PostGalleryPath" />
+    </data>
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/thumbnail"
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp50"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:scaleType="centerCrop"
+        app:civ_border_color="#7e3c62"
+        app:civ_border_width="0dp"
+        bind:imageUrl="@{postGalleryPath.imageUrl}" />
+
+</layout>

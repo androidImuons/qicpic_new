@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="bottomtab"
+            type="com.saqcess.qicpic.viewmodel.HomeViewModel" />
+    </data>
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        tools:context=".view.activity.OzogramHomeActivity"
+        android:layout_height="@dimen/dp50">
+        <LinearLayout
+            android:id="@+id/ll_home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="@{bottomtab::onClickHome}"
+            android:gravity="center"
+            android:layout_weight="1">
+            <com.saqcess.qicpic.customeview.TintImageView
+                android:id="@+id/iv_home"
+                android:layout_width="25dp"
+                android:src="@drawable/ic_home"
+                android:duplicateParentState="true"
+                android:tint="@color/colorPrimary"
+                android:layout_height="25dp">
+
+            </com.saqcess.qicpic.customeview.TintImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_video"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="@{bottomtab::onClicVideo}"
+            android:layout_weight="1">
+            <com.saqcess.qicpic.customeview.TintImageView
+                android:id="@+id/iv_video"
+                android:layout_width="25dp"
+                android:src="@drawable/ic_video"
+                android:duplicateParentState="true"
+                android:tint="@color/colorPrimary"
+                android:layout_height="25dp">
+
+            </com.saqcess.qicpic.customeview.TintImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_gallery"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="@{bottomtab::onClickGallery}"
+            android:layout_weight="1">
+            <com.saqcess.qicpic.customeview.TintImageView
+                android:id="@+id/iv_gallery"
+                android:layout_width="25dp"
+                android:src="@drawable/ic_add"
+                android:duplicateParentState="true"
+                android:tint="@color/colorPrimary"
+                android:layout_height="25dp">
+
+            </com.saqcess.qicpic.customeview.TintImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_fav"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="@{bottomtab::onClickFav}"
+            android:layout_weight="1">
+            <com.saqcess.qicpic.customeview.TintImageView
+                android:id="@+id/iv_fav"
+                android:layout_width="25dp"
+                android:src="@drawable/ic_like"
+                android:duplicateParentState="true"
+                android:tint="@color/colorPrimary"
+                android:layout_height="25dp">
+
+            </com.saqcess.qicpic.customeview.TintImageView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_profile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:onClick="@{bottomtab::onClickProfile}"
+            android:layout_weight="1">
+            <com.saqcess.qicpic.customeview.TintImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="25dp"
+                android:src="@drawable/ic_profile_pic"
+                android:duplicateParentState="true"
+                android:layout_height="25dp">
+
+            </com.saqcess.qicpic.customeview.TintImageView>
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="EditProfile"
+            type="com.saqcess.qicpic.viewmodel.EditProfileViewModel" />
+
+        <variable
+            name="handlers"
+            type="com.saqcess.qicpic.view.activity.AddProfileActivity.MyClickHandlers" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_add_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_image"
+        tools:context=".view.activity.AddProfileActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/welcome_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_addBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:background="@drawable/greybox"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="@dimen/dp50"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:onClick="@{handlers::onCancelClick}"
+                        android:background="@drawable/cancel_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_marginLeft="@dimen/dp30"
+                        android:gravity="start|center"
+                        android:text="Add Bio"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp16"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/morn_bold"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp50"
+                        android:layout_gravity="center"
+                        android:onClick="@{handlers::onAcceptAddBioClick}"
+                        android:background="@drawable/accept_icon" />
+
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_bio"
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/dp10"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_addBio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/type_here"
+                        android:inputType="text"
+                        android:text="@={EditProfile.bio}"
+                        android:singleLine="false"
+                        android:maxLines="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorHintLight"
+                        android:textSize="@dimen/sp14"
+                        android:fontFamily="@font/morn_regular" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:background="@drawable/greybox"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="@dimen/dp50"
+                        android:layout_gravity="center"
+                        android:padding="10dp"
+                        android:onClick="@{handlers::onCancelClick}"
+                        android:background="@drawable/cancel_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp30"
+                        android:layout_marginLeft="@dimen/dp30"
+                        android:gravity="start|center"
+                        android:text="@string/name"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/sp16"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/morn_bold" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp50"
+                        android:layout_gravity="center"
+                        android:onClick="@{handlers::onAcceptEditNameClick}"
+                        android:background="@drawable/accept_icon" />
+
+
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_editName"
+                    android:layout_width="match_parent"
+                    android:layout_margin="@dimen/dp10"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/input_editName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/name"
+                        android:inputType="text"
+                        android:text="@={EditProfile.fullName}"
+                        android:singleLine="false"
+                        android:maxLines="10"
+                        android:textColor="@color/colorWhite"
+                        android:textColorHint="@color/colorHintLight"
+                        android:textSize="@dimen/sp14"
+                        android:fontFamily="@font/morn_regular" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

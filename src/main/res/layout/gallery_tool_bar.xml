@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="gallerytool"
+            type="com.saqcess.qicpic.viewmodel.GalleryViewModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_weight=".3"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/ic_cross">
+
+            </ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".9"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/spinner_show"
+                android:layout_width="match_parent"
+                android:spinnerMode="dropdown"
+                android:popupBackground="@color/colorPrimary"
+                android:layout_height="match_parent"
+               android:backgroundTint="@color/colorWhite"
+                android:singleLine="true"
+                android:textSize="14dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".8"
+            android:paddingRight="@dimen/dp20"
+            android:gravity="right"
+            android:weightSum="1">
+
+            <com.saqcess.qicpic.customeview.TypeTextView
+                android:id="@+id/txt_next"
+                android:layout_width="@dimen/dp100"
+                android:text="Next"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                app:custom_font="@string/app_font_bold"
+                android:textColor="@color/colorWhite"
+                android:layout_height="match_parent">
+
+            </com.saqcess.qicpic.customeview.TypeTextView>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

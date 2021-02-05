@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppTheme">
+
+        <attr name="dialog_wait_card_bg_color" format="color" />
+        <attr name="dialog_wait_loader_color" format="color" />
+        <attr name="dialog_wait_msg_text_color" format="color" />
+        <attr name="dialog_wait_msg_text_size" format="dimension" />
+
+
+        <attr name="et_big_text_size" format="dimension" />
+        <attr name="et_big_height" format="dimension" />
+
+        <attr name="btn_bg_drawable_sec" format="reference" />
+        <attr name="btn_bg_color_sec" format="color" />
+        <attr name="btn_text_color_sec" format="color" />
+
+    </declare-styleable>
+
+
+</resources>

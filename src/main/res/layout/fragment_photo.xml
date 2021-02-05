@@ -1,0 +1,200 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="phot"
+            type="com.saqcess.qicpic.viewmodel.PhotoViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:context="com.saqcess.qicpic.view.fragment.PhotoFragment">
+
+        <FrameLayout
+            android:id="@+id/camer_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp20"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_camera_side"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp50"
+                android:background="@drawable/ic__camer_rear"
+                android:backgroundTint="@color/colorWhite">
+
+            </ImageView>
+
+            <Button
+                android:id="@+id/btn_take_photo"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:backgroundTint="@color/colorWhite"
+                android:background="@drawable/ic_circle_100">
+
+            </Button>
+            <ImageView
+                android:id="@+id/iv_flash_on_off"
+                android:layout_width="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp50"
+                android:background="@drawable/ic__flash_on"
+                android:backgroundTint="@color/colorWhite"
+                android:layout_height="@dimen/dp30">
+
+            </ImageView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.CameraFragment">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/black"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black">
+
+                <SurfaceView
+                    android:id="@+id/imgSurface"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/textCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_record_video"
+                    android:drawableLeft="@drawable/red_dot"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="00:00"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/llImageModificationBottomOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/imgImageDisplay"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.25"
+                        android:background="@android:color/transparent"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"/>
+
+                    <RelativeLayout
+                        android:id="@+id/rlCaptureOption"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="0.75"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/imgChangeCamera"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_change_camera" />
+
+
+                        <LinearLayout
+
+                            android:gravity="center"
+                            android:id="@+id/middleLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+
+                                android:padding="5dp"
+                                android:id="@+id/hintTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="Hold for video, tap for photo"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_marginBottom="20dp"
+                                android:id="@+id/imgCapture"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_horizontal|center_vertical"
+                                android:src="@drawable/ic_circle_80" />
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/imgFlashOnOff"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_flash_auto" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
+
+</layout>

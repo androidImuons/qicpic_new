@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="commentreply"
+            type="com.saqcess.qicpic.viewmodel.ViewAllCommentViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent_color"
+            app:behavior_hideable="true"
+            app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+            <!--app:layout_behavior="android.support.design.widget.BottomSheetBehavior"-->
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp10"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="@dimen/dp15">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/welcome_bg">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txt_back"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_back"
+                                android:drawablePadding="@dimen/dp20"
+                                android:drawableTint="@color/colorWhite"
+                                android:gravity="center_vertical"
+                                android:padding="@dimen/dp10"
+                                android:textColor="@color/colorWhite"
+                                android:fontFamily="@font/morn_bold"
+                                android:text="Reply"
+                                android:textSize="18dp">
+
+                            </TextView>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp100"
+                                android:layout_margin="@dimen/dp5"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:layout_marginLeft="@dimen/dp10"
+                                    android:background="@drawable/ic_circle_80"
+                                    android:gravity="center">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center">
+
+                                        <de.hdodenhof.circleimageview.CircleImageView
+                                            android:id="@+id/iv_profile"
+                                            android:layout_width="@dimen/dp40"
+                                            android:layout_height="@dimen/dp40"
+                                            android:layout_centerInParent="true"
+                                            android:background="@drawable/profile_pic">
+
+                                        </de.hdodenhof.circleimageview.CircleImageView>
+
+                                        <ProgressBar
+                                            android:id="@+id/pb_image"
+                                            android:layout_width="@dimen/dp20"
+                                            android:layout_height="@dimen/dp20"
+                                            android:layout_centerInParent="true"
+                                            android:visibility="gone"
+
+                                            ></ProgressBar>
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/dp5"
+                                    android:layout_weight="0.8"
+                                    android:weightSum="1">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical"
+                                        android:visibility="visible">
+
+                                        <TextView
+                                            android:id="@+id/txt_user_name"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/colorWhite"
+                                            android:fontFamily="@font/morn_bold"
+                                            android:textSize="@dimen/sp16">
+
+                                        </TextView>
+
+                                        <com.saqcess.qicpic.customeview.ReadMoreTextView
+                                            android:id="@+id/tv_message"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tv_title"
+                                            android:layout_marginEnd="@dimen/dp5"
+                                            android:background="@null"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="@dimen/dp15"
+                                            app:colorClickableText="@color/colorBlue"
+                                            app:custom_font="@string/app_font_regular"
+                                            app:trimLength="150"
+                                            app:trimMode="trimModeLength" />
+
+                                        <LinearLayout
+                                            android:layout_width="314dp"
+                                            android:layout_height="@dimen/dp20"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+                                            <TextView
+                                                android:id="@+id/txt_time"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center_vertical"
+                                                android:textColor="@color/colorHintLight"
+                                                android:textSize="@dimen/sp14"
+                                                android:fontFamily="@font/morn_regular">
+
+                                            </TextView>
+
+                                            <TextView
+                                                android:id="@+id/txt_total_like"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center_vertical"
+                                                android:paddingStart="@dimen/dp20"
+                                                android:textColor="@color/colorHintLight"
+                                                android:textSize="@dimen/sp14"
+                                                android:fontFamily="@font/morn_regular">
+
+                                            </TextView>
+
+                                            <TextView
+                                                android:id="@+id/txt_reply"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:gravity="center_vertical"
+                                                android:paddingStart="@dimen/dp20"
+                                                android:text="Reply"
+                                                android:visibility="visible"
+                                                android:textColor="@color/colorWhite"
+                                                android:textSize="@dimen/sp14"
+                                                android:textStyle="bold"
+                                                android:fontFamily="@font/morn_bold">
+
+                                            </TextView>
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginTop="@dimen/dp20"
+                                    android:layout_marginEnd="@dimen/dp20"
+                                    android:layout_weight="0.2"
+                                    android:gravity="center">
+
+                                    <ImageView
+                                        android:id="@+id/iv_heart"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:background="@drawable/selected_heart"
+                                        android:clickable="true"
+                                        app:tint="@color/colorBlack">
+
+                                    </ImageView>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_edit_layer"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp50"
+                                android:layout_alignParentBottom="true"
+                                android:layout_margin="@dimen/dp10"
+                                android:background="@color/colorWhite"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/dp40"
+                                    android:layout_height="@dimen/dp40"
+                                    android:layout_margin="7dp"
+                                    android:background="@drawable/ic_circle_80"
+                                    android:gravity="center">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/iv_user_photo"
+                                        android:layout_width="@dimen/dp25"
+                                        android:layout_height="@dimen/dp25"
+                                        android:background="@drawable/ic_profile">
+
+                                    </de.hdodenhof.circleimageview.CircleImageView>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/et_comment"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@color/colorWhite"
+                                    android:hint="Reply"
+                                    android:gravity="center_vertical"
+                                    android:lines="5"
+                                    android:padding="@dimen/dp10"
+                                    android:scrollbars="vertical"
+                                    android:textColor="@color/colorBlack">
+
+                                </TextView>
+
+                                <LinearLayout
+                                    android:layout_width="@dimen/dp60"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:id="@+id/txt_post"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:text="Post"
+                                        android:visibility="gone"
+                                        android:textColor="@color/colorBlue"
+                                        android:textSize="@dimen/sp18"
+                                        bind:custom_font="@string/app_font_bold">
+
+                                    </TextView>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recycle_replyList"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/dp5"
+                                tools:listitem="@layout/view_comment_view">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

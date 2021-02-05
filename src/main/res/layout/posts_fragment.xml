@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<!--
+    <data>
+
+        <variable
+            name="Gallery"
+            type="com.saqcess.qicpic.viewmodel.GalleryViewModel" />
+    </data>
+-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragment.PostsFragment">
+
+<!--
+        <RelativeLayout
+            android:id="@+id/ll_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/inculde_gallery_tool_bar"
+                layout="@layout/gallery_tool_bar"
+                bind:gallerytool="@{Gallery}"></include>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/gallery_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp50"
+                android:layout_marginBottom="@dimen/dp50"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            </androidx.viewpager.widget.ViewPager>
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/gallery"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                app:tabGravity="fill"
+                app:tabTextAppearance="@style/CustomTabText"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorPrimary"
+                app:tabTextColor="@color/colorHint" />
+
+
+        </RelativeLayout>
+-->
+
+    </FrameLayout>
+</layout>

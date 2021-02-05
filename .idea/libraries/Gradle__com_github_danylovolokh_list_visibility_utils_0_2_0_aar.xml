@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.danylovolokh:list-visibility-utils:0.2.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb4e52f897992462f31345025912048d/jetified-list-visibility-utils-0.2.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb4e52f897992462f31345025912048d/jetified-list-visibility-utils-0.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/fb4e52f897992462f31345025912048d/jetified-list-visibility-utils-0.2.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.danylovolokh/list-visibility-utils/0.2.0/29b016ae086150677095a825569ab36df1f43a19/list-visibility-utils-0.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.danylovolokh/list-visibility-utils/0.2.0/ee9b939669f45ead5119dfaa88f199e5d7836254/list-visibility-utils-0.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

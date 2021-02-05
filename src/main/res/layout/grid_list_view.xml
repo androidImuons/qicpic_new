@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_gallery_view"
+        android:layout_width="120dp"
+        android:layout_height="120dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_show_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+            <ProgressBar
+                android:id="@+id/pb_image"
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp15"
+                android:visibility="gone"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+
+        <com.saqcess.qicpic.customeview.TypefaceCheckBox
+            android:id="@+id/ch_image_check"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp25"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:gravity="center"
+            android:button="@drawable/ch_selecter"
+            android:textColor="@color/colorBlack"
+            android:visibility="visible"
+            android:textSize="15dp"
+            app:custom_font="@string/app_font_regular">
+
+        </com.saqcess.qicpic.customeview.TypefaceCheckBox>
+    </RelativeLayout>
+</LinearLayout>

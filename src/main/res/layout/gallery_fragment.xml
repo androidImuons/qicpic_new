@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite"
+    tools:context=".view.fragment.GalleryFragment">
+
+    <com.saqcess.qicpic.customeview.TypeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp2"
+        android:gravity="center"
+        android:text="Coming Soon !"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sp14"
+        android:textStyle="bold"
+        app:custom_font="@string/app_font_bold" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_profile_gallery"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/post_row_item" />
+
+</FrameLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="video"
+            type="com.saqcess.qicpic.viewmodel.VideoFragmentViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/camer_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+        <TextView
+            android:id="@+id/textCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_record_video"
+            android:drawableLeft="@drawable/red_dot"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:text="00:00"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+        <TextView
+
+            android:padding="5dp"
+            android:id="@+id/hintTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:text="Hold for video"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp20"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_camera_side"
+                android:layout_width="@dimen/dp30"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp50"
+                android:background="@drawable/ic__camer_rear"
+                android:backgroundTint="@color/colorWhite">
+
+            </ImageView>
+
+            <Button
+                android:id="@+id/btn_take_photo"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:backgroundTint="@color/colorWhite"
+                android:background="@drawable/ic_circle_100">
+
+            </Button>
+            <ImageView
+                android:id="@+id/iv_flash_on_off"
+                android:layout_width="@dimen/dp30"
+                android:layout_marginLeft="@dimen/dp50"
+                android:background="@drawable/ic__flash_on"
+                android:backgroundTint="@color/colorWhite"
+                android:layout_height="@dimen/dp30">
+
+            </ImageView>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

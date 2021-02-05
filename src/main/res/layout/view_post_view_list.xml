@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:weightSum="1">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/gray_line">
+
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/dp10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="60dp"
+            android:gravity="center"
+            android:background="@drawable/diamond_shape"
+            android:layout_height="60dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user_image"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/ic_logo" />
+
+<!--
+            <ProgressBar
+                android:id="@+id/pb_image"
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp15"
+                android:layout_centerInParent="true" />
+-->
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_post_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp5"
+                android:text="Rahul Vh"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp"
+                android:fontFamily="@font/morn_bold">
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="@dimen/dp5"
+                android:layout_height="@dimen/dp20"
+                android:background="@drawable/ic_more">
+
+            </ImageView>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/gray_line">
+
+    </View>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:gravity="center_vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp10"
+
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_heart"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/selected_heart"
+                    app:tint="@color/colorBlack">
+
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_commit"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/ic_chat">
+
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp10"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/iv_share"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/ic_share">
+
+                </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight=".7"
+                android:layout_height="match_parent">
+
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/circle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center|bottom"
+                    android:layout_margin="@dimen/dp5"
+                    android:visibility="visible"
+                    app:ci_drawable="@drawable/ic_square"
+                    app:ci_drawable_unselected="@drawable/ic_square" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_weight=".3"
+                android:gravity="right|center">
+
+                <ImageView
+                    android:id="@+id/iv_tag"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:background="@drawable/ic_bookmark">
+
+                </ImageView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_t_view"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="@dimen/dp5"
+        android:textSize="@dimen/sp12"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/dp5"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/morn_thin"
+        android:layout_height="20dp">
+
+    </TextView>
+    <com.saqcess.qicpic.customeview.ReadMoreTextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:background="@null"
+        android:textColor="@color/colorWhite"
+     android:layout_margin="@dimen/dp5"
+        android:textSize="@dimen/dp15"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="@dimen/dp5"
+        android:paddingLeft="@dimen/dp5"
+        app:colorClickableText="@color/colorBlue"
+        app:custom_font="@string/app_font_regular"
+        app:trimLength="150"
+        app:trimMode="trimModeLength" />
+    <TextView
+        android:id="@+id/txt_comment"
+        android:layout_width="match_parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="@dimen/dp5"
+        android:textSize="@dimen/sp12"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp5"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:fontFamily="@font/morn_thin"
+        android:layout_height="20dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/txt_t_comment"
+        android:layout_width="match_parent"
+      android:layout_marginStart="5dp"
+        android:layout_marginEnd="@dimen/dp5"
+        android:textSize="@dimen/sp12"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp5"
+        android:textColor="@color/text_color_gray"
+        android:textStyle="bold"
+        android:fontFamily="@font/morn_regular"
+        android:layout_height="20dp">
+
+    </TextView>
+</LinearLayout>

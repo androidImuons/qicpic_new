@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userprofiel"
+            type="com.saqcess.qicpic.viewmodel.UserProfileResponseModel" />
+
+        <variable
+            name="handlers"
+            type="com.saqcess.qicpic.view.fragment.StoryFragment.MyClickHandlers" />
+
+    </data>
+
+    <FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/fl_storyFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/welcome_bg"
+        tools:context=".view.fragment.StoryFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_profile_story_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp200"
+                tools:listitem="@layout/post_row_item" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp5"
+                    android:text="@string/complete_your_profile"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/morn_bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:text="@string/_3_of_4_complete"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/sp12"
+                   android:fontFamily="@font/morn_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp150"
+                        android:layout_margin="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@drawable/gallery_box"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_addBio"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="@drawable/add_bio_icon" />
+
+                        <TextView
+                            android:id="@+id/tv_addBio1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_addBio"
+                            android:layout_margin="@dimen/dp2"
+                            android:gravity="center"
+                            android:padding="@dimen/dp2"
+                            android:text="@string/add_bio"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp10"
+                           android:fontFamily="@font/morn_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_addBio1"
+                            android:layout_margin="@dimen/dp2"
+                            android:gravity="center"
+                            android:padding="@dimen/dp2"
+                            android:ellipsize="middle"
+                            android:text="Tell your followers a little bit about yourself"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp10"
+                            android:fontFamily="@font/morn_regular" />
+
+                        <TextView
+                            android:id="@+id/btnAddBio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:layout_marginRight="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:background="@drawable/ic_button"
+                            android:gravity="center"
+                            android:onClick="@{handlers::onAddBioClick}"
+                            android:padding="@dimen/dp5"
+                            android:text="@string/add_bio"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/sp10"
+                            android:textAllCaps="true"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/morn_bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp150"
+                        android:layout_margin="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@drawable/gallery_box"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_edit"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="@drawable/edit_name_icon" />
+
+                        <TextView
+                            android:id="@+id/tv_edit1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_edit"
+                            android:layout_margin="@dimen/dp2"
+                            android:gravity="center"
+                            android:padding="@dimen/dp2"
+                            android:text="@string/add_your_name"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp10"
+                            android:fontFamily="@font/morn_bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_edit1"
+                            android:layout_margin="@dimen/dp2"
+                            android:gravity="center"
+                            android:padding="@dimen/dp2"
+                            android:ellipsize="middle"
+                            android:text="@string/add_your_full_name_so_your_friend_know_it_s_you"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp10"
+                            android:fontFamily="@font/morn_regular" />
+
+                        <TextView
+                            android:id="@+id/btnEditName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:layout_marginRight="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:background="@drawable/profile_disable_btn"
+                            android:gravity="center"
+                            android:onClick="@{handlers::onEditNameClick}"
+                            android:padding="@dimen/dp5"
+                            android:text="@string/edit_name"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp10"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/morn_bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_find_people"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp150"
+                        android:layout_margin="@dimen/dp5"
+                        android:layout_weight="1"
+                        android:background="@drawable/gallery_box"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_find"
+                            android:layout_width="@dimen/dp25"
+                            android:layout_height="@dimen/dp25"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="@drawable/follow_icon" />
+
+                        <TextView
+                            android:id="@+id/tv_findPeople"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/iv_find"
+                            android:layout_margin="@dimen/dp2"
+                            android:gravity="center"
+                            android:padding="@dimen/dp2"
+                            android:text="@string/find_people_to_follow"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp10"
+                            android:fontFamily="@font/morn_bold" />
+
+                        <TextView
+                            android:id="@+id/tv_findPeople2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_findPeople"
+                            android:layout_margin="@dimen/dp2"
+                            android:gravity="center"
+                            android:padding="@dimen/dp2"
+                            android:ellipsize="middle"
+                            android:text="@string/follow_people_and_interests_you_care_about"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/sp10"
+                            android:fontFamily="@font/morn_regular"/>
+
+                        <com.saqcess.qicpic.customeview.TypeTextView
+                            android:id="@+id/btnFindMore"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginLeft="@dimen/dp15"
+                            android:layout_marginTop="@dimen/dp2"
+                            android:layout_marginRight="@dimen/dp15"
+                            android:layout_marginBottom="@dimen/dp10"
+                            android:background="@drawable/profile_disable_btn"
+                            android:gravity="center"
+                            android:onClick="@{handlers::onFindMoreClick}"
+                            android:padding="@dimen/dp5"
+                            android:text="@string/find_more"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/sp10"
+                            android:textAllCaps="true"
+                            android:fontFamily="@font/morn_bold" />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

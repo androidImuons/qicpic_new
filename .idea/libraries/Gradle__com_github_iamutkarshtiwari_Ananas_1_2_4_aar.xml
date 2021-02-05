@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.iamutkarshtiwari:Ananas:1.2.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79278bb0b8f38e6a0428d77a70c18fd9/jetified-Ananas-1.2.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79278bb0b8f38e6a0428d77a70c18fd9/jetified-Ananas-1.2.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/79278bb0b8f38e6a0428d77a70c18fd9/jetified-Ananas-1.2.4/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

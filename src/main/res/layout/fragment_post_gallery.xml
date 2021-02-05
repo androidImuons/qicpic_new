@@ -1,0 +1,119 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.saqcess.qicpic.view.fragment.PostGalleryFragment">
+
+    <data>
+
+        <variable
+            name="postone"
+            type="com.saqcess.qicpic.viewmodel.PostGalleryViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_list_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/ll_mid_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="#d0d7da">
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true" />
+
+                <com.volokh.danylo.video_player_manager.ui.VideoPlayerView
+                    android:id="@+id/video_player"
+                    android:layout_width="@dimen/dp300"
+                    android:layout_height="300dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <com.theartofdev.edmodo.cropper.CropImageView xmlns:custom="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cropImageView"
+                    android:layout_width="@dimen/dp300"
+                    android:layout_height="@dimen/dp300"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".2"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_crop"
+                            android:layout_width="@dimen/dp30"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:src="@drawable/ic_view_full_screen">
+
+                        </ImageView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".8"
+                        android:gravity="right|center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/dp10">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="@dimen/dp40"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:src="@drawable/ic_select_view">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/iv_select_multiple_image"
+                            android:layout_width="150dp"
+                            android:layout_height="@dimen/dp30"
+                            android:layout_marginLeft="@dimen/dp20"
+                            android:background="@drawable/ic_select_multiple"
+                            android:gravity="center"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/dp10">
+
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:choiceMode="multipleChoice"
+                android:stretchMode="columnWidth"
+                android:background="@drawable/welcome_bg"
+                tools:listitem="@layout/grid_list_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
